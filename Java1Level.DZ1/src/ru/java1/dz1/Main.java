@@ -17,7 +17,8 @@ public class Main {
 
         Uravnenie();
         Logic();
-        Otritsanie();
+        PositiveOrNegative();
+        Negative();
 
 
     }
@@ -60,7 +61,7 @@ public class Main {
         scanner.close();
     }
 
-    private static void Otritsanie(){
+    private static void PositiveOrNegative(){
         Scanner scanner=new Scanner(System.in);
         System.out.println("Введите число:");
         byte a = scanner.nextByte();
@@ -74,6 +75,18 @@ public class Main {
         scanner.close();
     }
 
+    private static void Negative(){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Введите число:");
+        byte a = scanner.nextByte();
+
+        if (a<0) {
+            System.out.println("Введенное число отрицательное");
+            System.out.println(true);
+        }
+
+        scanner.close();
+    }
 
 }
 
