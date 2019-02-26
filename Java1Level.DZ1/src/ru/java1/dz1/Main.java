@@ -15,14 +15,14 @@ public class Main {
         float f = 105.5f;
         double d = 505.55;
 
-        Uravnenie();
-        Logic();
-        PositiveOrNegative();
-        Negative();
-
+        uravnenie();
+        logic();
+        positiveOrNegative();
+        negative();
+        greetings();
 
     }
-    private static void Uravnenie(){
+    private static void uravnenie(){
         Scanner scanner=new Scanner(System.in);
         int result;
         System.out.println("Введите первое число:");
@@ -41,7 +41,7 @@ public class Main {
 
     }
 
-    private static void Logic(){
+    private static void logic(){
         Scanner scanner=new Scanner(System.in);
         System.out.println("Введите первое число:");
         int a = scanner.nextInt();
@@ -61,7 +61,7 @@ public class Main {
         scanner.close();
     }
 
-    private static void PositiveOrNegative(){
+    private static void positiveOrNegative(){
         Scanner scanner=new Scanner(System.in);
         System.out.println("Введите число:");
         byte a = scanner.nextByte();
@@ -75,7 +75,7 @@ public class Main {
         scanner.close();
     }
 
-    private static void Negative(){
+    private static void negative(){
         Scanner scanner=new Scanner(System.in);
         System.out.println("Введите число:");
         byte a = scanner.nextByte();
@@ -86,6 +86,13 @@ public class Main {
         }
 
         scanner.close();
+    }
+
+    private static void greetings(){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Введите имя:");
+        String name=scanner.next();
+        System.out.println("Привет, "+name+"!");
     }
 
 }
