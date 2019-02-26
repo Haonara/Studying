@@ -20,6 +20,7 @@ public class Main {
         positiveOrNegative();
         negative();
         greetings();
+        years();
 
     }
     private static void uravnenie(){
@@ -93,6 +94,27 @@ public class Main {
         System.out.println("Введите имя:");
         String name=scanner.next();
         System.out.println("Привет, "+name+"!");
+    }
+
+    private static void years(){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Введите год:");
+        int year=scanner.nextInt();
+
+        if (year%100==0) {
+            if (year%400==0) {
+                System.out.println("Год является високосным.");
+            }
+            else {
+                System.out.println("Год не является високосным.");
+            }
+        }
+        else if (year%4==0) {
+            System.out.println("Год является високосным.");
+        }
+        else {
+            System.out.println("Год не является високосным.");
+        }
     }
 
 }
