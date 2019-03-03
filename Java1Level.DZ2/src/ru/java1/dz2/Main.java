@@ -14,7 +14,9 @@ public class Main {
 
     public static void invertArray () {
 
+        Scanner scanner=new Scanner(System.in);
         System.out.println("Введите размерность массива:");
+        int n=new scanner;
         
 
     }
