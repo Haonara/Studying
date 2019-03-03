@@ -13,7 +13,9 @@ public class Main {
     //changeArray();
     //fillDiagonal();
     //arrayMinMax();
-    System.out.println("The result is: " + checkBalance(new int[]{1, 2, 3, 1, 0, 1, 3}));
+    //System.out.println("The result is: " + checkBalance(new int[]{1, 2, 3, 1, 0, 1, 3}));
+        arrayShift();
+
 
     }
 
@@ -113,6 +115,36 @@ public class Main {
             }
         }
         return false;
+    }
+
+    public static void arrayShift(){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Введите размерность массива:");
+        int n=scanner.nextInt();
+        int [] arr=new int[n];
+        for (int i=0; i<n; i++) {
+            arr [i]=(int)(Math.random()*10);
+            System.out.println("arr["+i+"]="+arr[i]);
+        }
+
+        System.out.println("Введите шаг смещения:");
+        int shift=scanner.nextInt();
+        int tmp;
+
+        System.out.println("Смещенный массив:");
+        for(int i = 0; i < arr.length;i++)
+        {
+            tmp = arr[i];
+            for(int j = 0;j<arr.length-shift;j++)
+            {
+                arr[i]=arr[j];
+                arr[j]=arr[j+shift];
+                arr[arr.length-shift]=tmp;
+            }
+            System.out.println("arr["+i+"]="+arr[i]);
+
+        }
+
     }
 
 }
