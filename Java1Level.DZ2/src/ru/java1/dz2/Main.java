@@ -13,6 +13,7 @@ public class Main {
     //changeArray();
     //fillDiagonal();
     //arrayMinMax();
+    System.out.println("The result is: " + checkBalance(new int[]{1, 2, 3, 1, 0, 1, 3}));
 
     }
 
@@ -93,6 +94,25 @@ public class Main {
         }
         System.out.println("Минимальное значение массива =" +min);
         System.out.println("Максимальное значение массива =" +max);
+    }
+
+    private static boolean checkBalance(int[] arr) {
+        for(int i = 0; i < arr.length; i++) {
+            int balance = 0;
+
+            for(int j = 0; j <= i; j++) {
+                balance += arr[j];
+            }
+
+            for(int j = i + 1; j < arr.length; j++) {
+                balance -= arr[j];
+            }
+
+            if(balance == 0) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
