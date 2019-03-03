@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
     //invertArray();
-
+    //fillArray();
 
     }
 
@@ -33,5 +33,11 @@ public class Main {
 
     }
 
-    
+    public static void fillArray (){
+        int [] arr=new int[8];
+        for (int i=0; i<8; i++) {
+            arr [i]=i*3;
+            System.out.println("arr["+i+"]="+arr[i]);
+        }
+    }
 }
