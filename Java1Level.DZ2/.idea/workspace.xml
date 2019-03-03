@@ -14,8 +14,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/java1/dz2/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+            <state relative-caret-position="272">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,6 +53,51 @@
             <path>
               <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
+              <item name="ru" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
+              <item name="ru" type="462c0819:PsiDirectoryNode" />
+              <item name="java1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
+              <item name="ru" type="462c0819:PsiDirectoryNode" />
+              <item name="java1" type="462c0819:PsiDirectoryNode" />
+              <item name="dz2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
@@ -153,8 +198,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/java1/dz2/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

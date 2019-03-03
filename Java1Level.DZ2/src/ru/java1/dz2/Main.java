@@ -11,6 +11,7 @@ public class Main {
     //invertArray();
     //fillArray();
     //changeArray();
+    //fillDiagonal();
 
     }
 
@@ -52,5 +53,23 @@ public class Main {
         }
 
     }
+
+    public static void fillDiagonal() {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Введите размерность массива:");
+        int n=scanner.nextInt();
+        int[][] arr = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j=0; j<n; j++){
+                if (i==j) {
+                    arr[i][j]=1;
+                }
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+
+    }
+
 
 }
