@@ -12,6 +12,7 @@ public class Main {
     //fillArray();
     //changeArray();
     //fillDiagonal();
+    //arrayMinMax();
 
     }
 
@@ -71,5 +72,27 @@ public class Main {
 
     }
 
+    public static void arrayMinMax(){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Введите размерность массива:");
+        int n=scanner.nextInt();
+        int [] arr=new int[n];
+        for (int i=0; i<n; i++) {
+            arr [i]=(int)(Math.random()*10);
+            System.out.println("arr["+i+"]="+arr[i]);
+        }
+        int min=10;
+        int max=0;
+        for (int i=0; i<n; i++) {
+            if (arr[i]<=min){
+                min=arr[i];
+            }
+            if (arr[i]>=max) {
+                max=arr[i];
+            }
+        }
+        System.out.println("Минимальное значение массива =" +min);
+        System.out.println("Максимальное значение массива =" +max);
+    }
 
 }

@@ -14,8 +14,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/java1/dz2/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="172">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,51 +53,6 @@
             <path>
               <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
-              <item name="java1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="Java1Level.DZ2" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
-              <item name="java1" type="462c0819:PsiDirectoryNode" />
-              <item name="dz2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Java1Level.DZ2" type="b2602c69:ProjectViewProjectNode" />
@@ -173,7 +128,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -198,8 +153,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/java1/dz2/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="172">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
