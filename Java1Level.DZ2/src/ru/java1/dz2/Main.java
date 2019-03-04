@@ -8,13 +8,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-    //invertArray();
-    //fillArray();
-    //changeArray();
-    //fillDiagonal();
-    //arrayMinMax();
-    //System.out.println("The result is: " + checkBalance(new int[]{1, 2, 3, 1, 0, 1, 3}));
-        arrayShift();
+    invertArray();
+    fillArray();
+    changeArray();
+    fillDiagonal();
+    arrayMinMax();
+    System.out.println("The result is: " + checkBalance(new int[]{1, 2, 3, 1, 0, 1, 3}));
+    arrayShift();
 
 
     }
@@ -128,23 +128,45 @@ public class Main {
         }
 
         System.out.println("Введите шаг смещения:");
-        int shift=scanner.nextInt();
+        byte shift=scanner.nextByte();
+
         int tmp;
-
-        System.out.println("Смещенный массив:");
-        for(int i = 0; i < arr.length;i++)
-        {
-            tmp = arr[i];
-            for(int j = 0;j<arr.length-shift;j++)
+        if (shift>0){
+            for(int i = 0; i <shift; i++)
             {
-                arr[i]=arr[j];
-                arr[j]=arr[j+shift];
-                arr[arr.length-shift]=tmp;
-            }
-            System.out.println("arr["+i+"]="+arr[i]);
+                tmp = arr[n-1];
+                for(int j = n-1;j>0;j--)
+                {
+                    arr[j]=arr[j-1];
+                }
+                arr[0]=tmp;
 
-        }
+            }
+            System.out.println("Смещенный массив:");
+            for (int i=0; i<n; i++) {
+                System.out.println("arr["+i+"]="+arr[i]);
+            }
+        } else if (shift<0){
+            for(int i = 0; i >shift; i--)
+            {
+                tmp = arr[0];
+                for(int j = 0;j<n-1;j++)
+                {
+                    arr[j]=arr[j+1];
+                }
+                arr[n-1]=tmp;
+
+            }
+            System.out.println("Смещенный массив:");
+            for (int i=0; i<n; i++) {
+                System.out.println("arr["+i+"]="+arr[i]);
+            }
+        } else {System.out.println("Массив не изменен.");}
+
+
 
     }
+
+
 
 }
