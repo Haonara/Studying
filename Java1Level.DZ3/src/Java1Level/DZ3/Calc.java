@@ -11,20 +11,25 @@ public class Calc {
         String[] line=in.nextLine().split(" ");
 
 
+        int result;
         int count1 = Integer.parseInt(line[0]);
         int count2 = Integer.parseInt(line[2]);
         switch (line[1]) {
             case "+":
-                System.out.println(count1 + count2);
+                result=count1 + count2;
+                System.out.println(result);
                 break;
             case "-":
-                System.out.println(count1 - count2);
+                result=count1 - count2;
+                System.out.println(result);
                 break;
             case "*":
-                System.out.println(count1 * count2);
+                result=count1 * count2;
+                System.out.println(result);
                 break;
             case "/":
-                System.out.println(count1 / count2);
+                result=count1 / count2;
+                System.out.println(result);
                 break;
         }
 

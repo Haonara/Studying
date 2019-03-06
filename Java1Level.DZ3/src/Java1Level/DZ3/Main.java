@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //guessNumber();
+        guessNumber();
         guessWord();
 
     }
@@ -91,7 +91,7 @@ public class Main {
 
                 System.out.println("Вы не угадали! Попробуйте еще раз. Количество букв больше загадонного.Подсказка:"+strb+"*****");
             }
-            
+
         }
 
         inWord.close();
