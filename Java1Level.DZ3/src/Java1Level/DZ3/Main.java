@@ -49,7 +49,7 @@ public class Main {
     }
 
     private static void  guessWord() {
-        String[] words = new String[]{"apple", "apricot", "avocado", "potato", "leak"};
+        String[] words = new String[]{"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot", "cherry", "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut", "pear", "pepper", "pineapple", "pumpkin", "potato"};
         int lengthArr = words.length;
         Scanner inWord = new Scanner(System.in);
         Random random = new Random();
@@ -61,14 +61,14 @@ public class Main {
             System.out.println("Угадайте загаданное слово.");
             int lengthWord = str.length();
             String guess = inWord.nextLine();
-            int l = guess.length();
+            int lengthGuess = guess.length();
             if (words[number].equalsIgnoreCase(guess)) {
                 System.out.println("Вы угадали!");
                 break;
-            } else if(l<=lengthWord){
+            } else if(lengthGuess<=lengthWord){
                 StringBuilder strb = new StringBuilder();
-                for (int i = 0; i <l; i++) {
-                    if (guess.charAt(i)==words[number].charAt(i)){
+                for (int i = 0; i <lengthGuess; i++) {
+                    if (guess.charAt(i)==str.charAt(i)){
                         strb.append(guess.charAt(i));
                     }
                     else {
@@ -76,12 +76,12 @@ public class Main {
                     }
                 }
 
-                System.out.println("Вы не угадали! Попробуйте еще раз. Количество букв меньше либо равно загадонному. Подсказка:"+strb+"*****");
+                System.out.println("Вы не угадали! Попробуйте еще раз. Количество букв меньше либо равно загадонному. Подсказка:"+strb+"******");
 
                 } else {
                 StringBuilder strb = new StringBuilder();
                 for (int i = 0; i <lengthWord; i++) {
-                    if (guess.charAt(i)==words[number].charAt(i)){
+                    if (guess.charAt(i)==str.charAt(i)){
                         strb.append(guess.charAt(i));
                     }
                     else {
@@ -89,7 +89,7 @@ public class Main {
                     }
                 }
 
-                System.out.println("Вы не угадали! Попробуйте еще раз. Количество букв больше загадонного.Подсказка:"+strb+"*****");
+                System.out.println("Вы не угадали! Попробуйте еще раз. Количество букв больше загадонного.Подсказка:"+strb+"******");
             }
 
         }
