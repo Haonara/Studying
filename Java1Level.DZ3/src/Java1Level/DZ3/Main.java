@@ -14,24 +14,24 @@ public class Main {
     private static void  guessNumber(){
 
         System.out.println("Ваша задача угадать число. Максимальное количество попыток - 3.");
-        int range=10;
-        int maxGuess=3;
+        int range=10; //Диапозон загадываемого числа (от 0 до 10).
+        int maxGuess=3; //Максимальное количество попыток.
         int curGuess=0;
         Scanner inNumber=new Scanner(System.in);
         Random random=new Random();
-        int number = random.nextInt(range);
+        int number = random.nextInt(range);  //Загадывается число.
 
         while(true){
             curGuess+=1;
             if (curGuess>maxGuess){
                 System.out.println("Вы проиграли! Повторить игру еще раз? 1-да, 0-нет.");
                 int povtor=inNumber.nextInt();
-                if (povtor==0){
+                if (povtor==0){           //Если ввели 0, то выходим из игры.
                 System.exit(0);}
                 else if (povtor!=1) {
                     System.out.println("Введенный ответ неверен. Будет произведен выход из игры.");
-                    System.exit(0);
-                } else curGuess=1;
+                    System.exit(0);  //Если ввели все, кроме 0 и 1, то выходим из игры.
+                } else curGuess=1;  //Играем заново, начиная с первой попытки.
             }
             System.out.println("Угадайте число от 0 до "+range);
             int input_number=inNumber.nextInt();
@@ -68,11 +68,11 @@ public class Main {
             } else if(lengthGuess<=lengthWord){
                 StringBuilder strb = new StringBuilder();
                 for (int i = 0; i <lengthGuess; i++) {
-                    if (guess.charAt(i)==str.charAt(i)){
+                    if (guess.charAt(i)==str.charAt(i)){ //Проверка совпадения слов посимвольно. Если символ есть, ставится символ.
                         strb.append(guess.charAt(i));
                     }
                     else {
-                        strb.append("*");
+                        strb.append("*");  //Иначе ставиться *.
                     }
                 }
 
@@ -81,11 +81,11 @@ public class Main {
                 } else {
                 StringBuilder strb = new StringBuilder();
                 for (int i = 0; i <lengthWord; i++) {
-                    if (guess.charAt(i)==str.charAt(i)){
+                    if (guess.charAt(i)==str.charAt(i)){ //Проверка совпадения слов посимвольно. Если символ есть, ставится символ.
                         strb.append(guess.charAt(i));
                     }
                     else {
-                        strb.append("*");
+                        strb.append("*"); //Иначе ставиться *.
                     }
                 }
 
