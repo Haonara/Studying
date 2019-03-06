@@ -48,28 +48,51 @@ public class Main {
         inNumber.close();
     }
 
-    private static void  guessWord(){
-        String[] words=new String[] {"apple", "apricot", "avocado", "potato"};
-        int length=words.length;
-        Scanner inWord=new Scanner(System.in);
-        Random random=new Random();
-        int number=random.nextInt(length);
+    private static void  guessWord() {
+        String[] words = new String[]{"apple", "apricot", "avocado", "potato", "leak"};
+        int lengthArr = words.length;
+        Scanner inWord = new Scanner(System.in);
+        Random random = new Random();
+        int number = random.nextInt(lengthArr);
+        StringBuilder strb = new StringBuilder();
+        String str = words[number];
 
-        while(true){
+        while (true) {
 
             System.out.println("Угадайте загаданное слово.");
-            String guess=inWord.nextLine();
-            if(guess.equalsIgnoreCase(words[number])){
+            int lengthWord = str.length();
+            String guess = inWord.nextLine();
+            int l = guess.length();
+            if (words[number].equalsIgnoreCase(guess)) {
                 System.out.println("Вы угадали!");
                 break;
-            }else {
-                System.out.println("Вы не угадали! Попробуйте еще раз.");
-            }
+            } else {
+
+                    System.out.println("Вы не угадали! Попробуйте еще раз.");
+                }
+
+
+               /* {
+                    for (int i = 0; i <=lengthWord; i++) {
+                        if (guess.charAt(i)==words[number].charAt(i)){
+                            strb.append(guess.charAt(i));
+                        }
+                        else {
+                            strb.append("*");
+                        }
+                    }
+                    System.out.println("Слово вы не угадали. Попробуйте еще раз. Подсказка: " +strb+"*****");
+                } while (l<=lengthWord);
+                   System.out.println("Вы не угадали! Попробуйте еще раз.");
+               }*/
+
+
+
 
 
         }
 
         inWord.close();
-
     }
+
 }
