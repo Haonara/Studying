@@ -54,7 +54,6 @@ public class Main {
         Scanner inWord = new Scanner(System.in);
         Random random = new Random();
         int number = random.nextInt(lengthArr);
-        StringBuilder strb = new StringBuilder();
         String str = words[number];
 
         while (true) {
@@ -66,30 +65,33 @@ public class Main {
             if (words[number].equalsIgnoreCase(guess)) {
                 System.out.println("Вы угадали!");
                 break;
-            } else {
-
-                    System.out.println("Вы не угадали! Попробуйте еще раз.");
+            } else if(l<=lengthWord){
+                StringBuilder strb = new StringBuilder();
+                for (int i = 0; i <l; i++) {
+                    if (guess.charAt(i)==words[number].charAt(i)){
+                        strb.append(guess.charAt(i));
+                    }
+                    else {
+                        strb.append("*");
+                    }
                 }
 
+                System.out.println("Вы не угадали! Попробуйте еще раз. Количество букв меньше либо равно загадонному. Подсказка:"+strb+"*****");
 
-               /* {
-                    for (int i = 0; i <=lengthWord; i++) {
-                        if (guess.charAt(i)==words[number].charAt(i)){
-                            strb.append(guess.charAt(i));
-                        }
-                        else {
-                            strb.append("*");
-                        }
+                } else {
+                StringBuilder strb = new StringBuilder();
+                for (int i = 0; i <lengthWord; i++) {
+                    if (guess.charAt(i)==words[number].charAt(i)){
+                        strb.append(guess.charAt(i));
                     }
-                    System.out.println("Слово вы не угадали. Попробуйте еще раз. Подсказка: " +strb+"*****");
-                } while (l<=lengthWord);
-                   System.out.println("Вы не угадали! Попробуйте еще раз.");
-               }*/
+                    else {
+                        strb.append("*");
+                    }
+                }
 
-
-
-
-
+                System.out.println("Вы не угадали! Попробуйте еще раз. Количество букв больше загадонного.Подсказка:"+strb+"*****");
+            }
+            
         }
 
         inWord.close();

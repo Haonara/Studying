@@ -10,6 +10,7 @@ public class Calc {
 
         String[] line=in.nextLine().split(" ");
 
+
         int count1 = Integer.parseInt(line[0]);
         int count2 = Integer.parseInt(line[2]);
         switch (line[1]) {
