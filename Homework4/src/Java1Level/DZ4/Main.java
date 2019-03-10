@@ -41,6 +41,20 @@ public class Main {
     }
 
     public static boolean checkWin(char symb) {
+
+        for (int i = 0; i < SIZE; i++)
+        {
+            // проверяем строки
+            if (checkLine(i, 0, 0, 1, symb)) return true;
+            // проверяем столбцы
+            if (checkLine(0, i, 1, 0, symb)) return true;
+        }
+        // проверяем диагонали
+        if (checkLine(0, 0, 1, 1, symb)) return true;
+        if (checkLine(0, SIZE - 1, 1, -1, symb)) return true;
+        return false;
+
+        /*
         if(map[0][0] == symb && map[0][1] == symb && map[0][2] == symb) return true;
         if(map[1][0] == symb && map[1][1] == symb && map[1][2] == symb) return true;
         if (map[2][0] == symb && map[2][1] == symb && map[2][2] == symb) return true;
@@ -49,7 +63,7 @@ public class Main {
         if (map[0][2] == symb && map[1][2] == symb && map[2][2] == symb) return true;
         if (map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) return true;
         if (map[2][0] == symb && map[1][1] == symb && map[0][2] == symb) return true;
-        return false;
+        return false;*/
     }
     public static boolean isMapFull() {
         for (int i = 0; i < SIZE; i++) {
@@ -77,6 +91,16 @@ public class Main {
         } while (!isCellValid(x, y)); // while(isCellValid(x, y) == false)
         map[y][x] = DOT_X;
     }
+
+    public static boolean checkLine(int start_x, int start_y, int last_x, int last_y, char symb){
+        for (int i = 0; i < SIZE; i++)
+        {
+            if (map[start_x + i * last_x][start_y + i * last_y] != symb)
+                return false;
+        }
+        return true;
+    }
+
     public static boolean isCellValid(int x, int y) {
         if (x < 0 || x >= SIZE || y < 0 || y >= SIZE) return false;
         if (map[y][x] == DOT_EMPTY) return true;
