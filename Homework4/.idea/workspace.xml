@@ -14,8 +14,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Java1Level/DZ4/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="47" column="57" lean-forward="true" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+            <state relative-caret-position="119">
+              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,7 +52,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552262357722" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552266865645" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -109,7 +109,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Messages" weight="0.32900432" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32900432" />
@@ -130,8 +130,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Java1Level/DZ4/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="47" column="57" lean-forward="true" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+        <state relative-caret-position="119">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

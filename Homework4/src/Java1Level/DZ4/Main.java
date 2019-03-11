@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static int SIZE = 3;
-    public static int DOTS_TO_WIN = 3;
+    public static int SIZE = 5;
+    public static int DOTS_TO_WIN = 4;
     public static final char DOT_EMPTY = '•';
     public static final char DOT_X = 'X';
     public static final char DOT_O = 'O';
@@ -74,13 +74,43 @@ public class Main {
         return true;
     }
     public static void aiTurn() {
-        int x, y;
+        int x;
+        int y;
+/*
+        boolean ai_win=false;
+        boolean user_win=false;
+
+
+        if (!ai_win)
+        {
+            for (int i = 0; i < SIZE; i++)
+            {
+                for (int j = 0; j < SIZE; j++)
+                {
+                    if (!isCellValid(i, j))
+                    {
+                        map[i][j] = DOT_X;
+                        if (checkWin(DOT_X))
+                        {
+                            x = i;
+                            y = j;
+                            user_win = true;
+                        }
+                        map[i][j] = DOT_EMPTY;
+                    }
+                }
+            }
+
+        }
+
+        */
         do {
             x = rand.nextInt(SIZE);
             y = rand.nextInt(SIZE);
         } while (!isCellValid(x, y));
         System.out.println("Компьютер походил в точку " + (x + 1) + " " + (y + 1));
-        map[y][x] = DOT_O;
+        map[x][y] = DOT_O;
+
     }
     public static void humanTurn() {
         int x, y;
@@ -93,7 +123,7 @@ public class Main {
     }
 
     public static boolean checkLine(int start_x, int start_y, int last_x, int last_y, char symb){
-        for (int i = 0; i < SIZE; i++)
+        for (int i = 0; i < DOTS_TO_WIN; i++)
         {
             if (map[start_x + i * last_x][start_y + i * last_y] != symb)
                 return false;
