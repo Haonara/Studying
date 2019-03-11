@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static int SIZE = 3;
-    public static int DOTS_TO_WIN = 3;
+    public static int SIZE = 5;
+    public static int DOTS_TO_WIN = 4;
     public static final char DOT_EMPTY = '•';
     public static final char DOT_X = 'X';
     public static final char DOT_O = 'O';
@@ -88,6 +88,29 @@ public class Main {
             }
         }
         }*/
+
+
+
+        /*
+        switch (checkWin(DOT_X)){
+        case true:{
+
+        } //Проверка победы ИИ
+        case false:{
+
+        } //Проверка победы человека + блокировка хода
+        default:
+            do {
+            x = rand.nextInt(SIZE);
+            y = rand.nextInt(SIZE);
+            } while (!isCellValid(x, y));
+            System.out.println("Компьютер походил в точку " + (x + 1) + " " + (y + 1));
+            map[x][y] = DOT_O;
+        }*/
+
+
+
+
 
 
 
