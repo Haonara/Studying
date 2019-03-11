@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static int SIZE = 5;
-    public static int DOTS_TO_WIN = 4;
+    public static int SIZE = 3;
+    public static int DOTS_TO_WIN = 3;
     public static final char DOT_EMPTY = '•';
     public static final char DOT_X = 'X';
     public static final char DOT_O = 'O';
@@ -54,16 +54,7 @@ public class Main {
         if (checkLine(0, SIZE - 1, 1, -1, symb)) return true;
         return false;
 
-        /*
-        if(map[0][0] == symb && map[0][1] == symb && map[0][2] == symb) return true;
-        if(map[1][0] == symb && map[1][1] == symb && map[1][2] == symb) return true;
-        if (map[2][0] == symb && map[2][1] == symb && map[2][2] == symb) return true;
-        if (map[0][0] == symb && map[1][0] == symb && map[2][0] == symb) return true;
-        if (map[0][1] == symb && map[1][1] == symb && map[2][1] == symb) return true;
-        if (map[0][2] == symb && map[1][2] == symb && map[2][2] == symb) return true;
-        if (map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) return true;
-        if (map[2][0] == symb && map[1][1] == symb && map[0][2] == symb) return true;
-        return false;*/
+
     }
     public static boolean isMapFull() {
         for (int i = 0; i < SIZE; i++) {
@@ -74,36 +65,35 @@ public class Main {
         return true;
     }
     public static void aiTurn() {
-        int x;
-        int y;
+        int x, y;
+
+        //Попытка поиска выигрышного хода
+
 /*
-        boolean ai_win=false;
-        boolean user_win=false;
-
-
-        if (!ai_win)
-        {
-            for (int i = 0; i < SIZE; i++)
-            {
-                for (int j = 0; j < SIZE; j++)
-                {
-                    if (!isCellValid(i, j))
-                    {
-                        map[i][j] = DOT_X;
-                        if (checkWin(DOT_X))
-                        {
-                            x = i;
-                            y = j;
-                            user_win = true;
-                        }
-                        map[i][j] = DOT_EMPTY;
-                    }
+        for (int i = 0; i <SIZE ; i++) {
+            for (int j = 0; j <SIZE ; j++) {
+            if (!isCellValid(i,j)){
+                map[i][j]=DOT_X;
+                if (checkWin(DOT_X)){
+                    map[i][j]=DOT_O;
+                    break;
+                }else {
+                    map[i][j]=DOT_EMPTY;
+                    x = rand.nextInt(SIZE);
+                    y = rand.nextInt(SIZE);
+                    map[x][y] = DOT_O;
+                    break;
                 }
+
             }
-
         }
+        }*/
 
-        */
+
+
+
+     //ИИ ходит рандомно
+
         do {
             x = rand.nextInt(SIZE);
             y = rand.nextInt(SIZE);
