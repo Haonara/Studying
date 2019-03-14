@@ -16,6 +16,14 @@ public class Main {
         peoplesArray[4]=new People("Болотная Ольга Ивановна", "Руководитель", "bolotnaya@mail.ru", "89144564545", 60000, 43);
 
 
+            for (int i = 0; i <peoplesArray.length ; i++) {
+                if (peoplesArray[i].age>=40){
+                System.out.println(peoplesArray[i].FIO+" "+peoplesArray[i].dolzhnost+" "+peoplesArray[i].age);
+                }
+            }
+
+
+
 
 
 
