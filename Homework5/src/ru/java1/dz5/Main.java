@@ -1,9 +1,12 @@
 package ru.java1.dz5;
 
 
+
 public class Main {
 
     public static void main(String[] args) {
+
+
 
         People[] peoplesArray = new People[5];
         peoplesArray[0]=new People("Иванов Иван Иванович", "Инженер", "ivanov@mail.ru", "8(954)123-45-45", 30000, 45);
@@ -12,7 +15,10 @@ public class Main {
         peoplesArray[3]=new People("Радужная Елена Сергеевна", "Врач", "raduga_es@mail.ru", "8(425)1275445", 35000, 35);
         peoplesArray[4]=new People("Болотная Ольга Ивановна", "Руководитель", "bolotnaya@mail.ru", "89144564545", 60000, 43);
 
-        
+
+
+
+
 
     }
 }
