@@ -73,14 +73,15 @@ public class Main {
         }
     }
 
-    public static void isDead(Hero h){
+    public static boolean isDead(Hero h){
         if (h.getHealth()==0){
             System.out.println("Герой мертв.");
-        }
+            return true;
+        }else return false;
     }
 
-    public static void checkWin(){
-
+    public static boolean checkWin(Hero[] h){
+        
     }
 
 }
