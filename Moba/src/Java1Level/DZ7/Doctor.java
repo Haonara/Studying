@@ -13,7 +13,7 @@ public class Doctor extends Hero {
 
     @Override
     void healing(Hero h){
-        if (h!=this&&h.health>0){
+        if (h.health>0){
             h.plusHealth(damage);
         }else {
             System.out.println("Мертвого не вылечить.");
