@@ -8,8 +8,10 @@ public class Assasin extends Hero {
 
     @Override
     void hit(Hero h){
-        if (h!=this){
+        if (h!=this&&h.health>0){
             h.causeDamage(damage);
+        }else {
+            System.out.println("Герой мертв.");
         }
     }
 

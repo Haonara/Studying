@@ -25,4 +25,15 @@ public abstract class Hero {
         System.out.println(health+ " "+type+" "+damage);
     }
 
+    public int getHealth() {
+        return health;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
 }
