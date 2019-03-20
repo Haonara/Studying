@@ -73,4 +73,14 @@ public class Main {
         }
     }
 
+    public static void isDead(Hero h){
+        if (h.getHealth()==0){
+            System.out.println("Герой мертв.");
+        }
+    }
+
+    public static void checkWin(){
+
+    }
+
 }
