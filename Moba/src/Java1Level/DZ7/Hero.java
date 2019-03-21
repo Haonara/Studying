@@ -1,12 +1,14 @@
 package Java1Level.DZ7;
 
 public abstract class Hero {
-    protected int health;
+    protected int maxHealth;
+    protected int curHealth;
     protected String type;
     protected int damage;
 
-    public Hero(int health, String type, int damage) {
-        this.health = health;
+    public Hero(int maxHealth,int curHealth, String type, int damage) {
+        this.maxHealth = maxHealth;
+        this.curHealth=curHealth;
         this.type = type;
         this.damage = damage;
     }
@@ -15,18 +17,22 @@ public abstract class Hero {
     abstract void healing (Hero h);
 
     void causeDamage(int damage){
-        health-=damage;
+        curHealth-=damage;
     }
     void plusHealth(int damage){
-        health+=damage;
+        curHealth+=damage;
     }
 
     void info(){
-        System.out.println(health+ " "+type+" "+damage);
+        System.out.println(maxHealth+" "+curHealth+ " "+type+" "+damage);
     }
 
-    public int getHealth() {
-        return health;
+    public int getMaxHealth() {
+        return maxHealth;
+    }
+
+    public int getCurHealth() {
+        return curHealth;
     }
 
     public String getType() {
