@@ -42,4 +42,5 @@ public abstract class Hero {
     public int getDamage() {
         return damage;
     }
+
 }

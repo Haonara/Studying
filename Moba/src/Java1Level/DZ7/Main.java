@@ -4,34 +4,49 @@ import java.util.Random;
 
 public class Main {
 
-
-
     public static void main(String[] args) {
 
-        Hero[] heroes1={new Warrior(100,100,"war",20),
+
+
+
+
+        Hero[] heroes3={new Warrior(100,100,"war",20),
         new Assasin(70,70,"ass",10),
         new Doctor(50,50,"doc",5)};
 
-        Hero[] heroes2={new Warrior(90,90,"war",15),
+        Hero[] heroes4={new Warrior(90,90,"war",15),
                 new Assasin(70,70,"ass",10),
                 new Doctor(50,50,"doc",7)};
 
-        for (Hero heroes:heroes1) {
+        for (Hero heroes:heroes3) {
             System.out.println(heroes.getMaxHealth()+" "+ heroes.getCurHealth()+" "+heroes.getType()+" "+heroes.getDamage());
         }
 
-        for (Hero heroes:heroes2) {
+        for (Hero heroes:heroes4) {
             System.out.println(heroes.getMaxHealth()+" "+ heroes.getCurHealth()+" "+heroes.getType()+" "+heroes.getDamage());
         }
 
-        firstTeam(heroes1,heroes2);
-        secondTeam(heroes2,heroes1);
+        firstTeam(heroes3,heroes4);
+        secondTeam(heroes4,heroes3);
 
-        for (Hero heroes:heroes1) {
+        /*while (!isDead){              //Пока никто не мертв
+            firstTeam(heroes3,heroes4); //Ходит первая команда
+            checkWin();                 //Проверка победы
+            secondTeam(heroes4,heroes3);//Ходи твторая команда
+            checkWin();                 //Проверка победы и вывод текукщего состояния команд
+            for (Hero heroes:heroes3) {
+            System.out.println(heroes.getMaxHealth()+" "+ heroes.getCurHealth()+" "+heroes.getType()+" "+heroes.getDamage());
+        }
+        for (Hero heroes:heroes4) {
+            System.out.println(heroes.getMaxHealth()+" "+ heroes.getCurHealth()+" "+heroes.getType()+" "+heroes.getDamage());
+        }
+        }*/  //загатовка алгоритма боя
+
+        for (Hero heroes:heroes3) {
             System.out.println(heroes.getMaxHealth()+" "+ heroes.getCurHealth()+" "+heroes.getType()+" "+heroes.getDamage());
         }
 
-        for (Hero heroes:heroes2) {
+        for (Hero heroes:heroes4) {
             System.out.println(heroes.getMaxHealth()+" "+ heroes.getCurHealth()+" "+heroes.getType()+" "+heroes.getDamage());
         }
 
@@ -73,15 +88,8 @@ public class Main {
         }
     }
 
-    public static boolean isDead(Hero h){
-        if (h.getCurHealth()==0){
-            System.out.println("Герой мертв.");
-            return true;
-        }else return false;
-    }
 
-    /*public static boolean checkWin(Hero[] h){
 
-    }*/
+
 
 }
