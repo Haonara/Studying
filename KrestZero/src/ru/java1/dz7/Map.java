@@ -59,7 +59,6 @@ public class Map extends JPanel {
         cellheigth = panelHeigth / fieldSizeY;
         cellWidth = panelWidth / fieldSizeX;
 
-        g.fillOval(20,20,80,80);
 
         for (int i = 0; i < fieldSizeY; i++) {
             int y = i * cellheigth;
@@ -70,6 +69,7 @@ public class Map extends JPanel {
             int x = i * cellWidth;
             g.drawLine(x,0,x,panelHeigth);
         }
+
 
     }
 
