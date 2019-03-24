@@ -10,13 +10,17 @@ public class Main {
     public static void main(String[] args) {
 
        new myWindow();
-       //new Dialog();
 
     }
 
 }
 
 class myWindow extends JFrame{
+
+    static JLabel text1=new JLabel("");
+    static JLabel text2=new JLabel("");
+    static JLabel text3=new JLabel("");
+
 
     public myWindow(){
         setTitle("DZ");
@@ -28,10 +32,6 @@ class myWindow extends JFrame{
         JLabel label3=new JLabel("Отчество:");
         JButton button1=new JButton("Добавить");
         JButton button2=new JButton("Выход");
-        JTextField text1=new JTextField("", 1);
-        JTextField text2=new JTextField("", 1);
-        JTextField text3=new JTextField("", 1);
-
 
 
         Container container=this.getContentPane();
@@ -62,6 +62,11 @@ class myWindow extends JFrame{
 
     }
 
+    static void setValue(String name, String surname, String lastName){
+        text1.setText(""+name);
+        text2.setText(""+surname);
+        text3.setText(""+lastName);
+    }
 
 
 }
@@ -80,18 +85,18 @@ class Dialog extends JFrame{
         JLabel label1=new JLabel("Введите фамилию:");
         JLabel label2=new JLabel("Введите имя:");
         JLabel label3=new JLabel("Введите отчество:");
-        JTextField text1=new JTextField("", 1);
-        JTextField text2=new JTextField("", 1);
-        JTextField text3=new JTextField("", 1);
+        JTextField textEdit1=new JTextField("", 1);
+        JTextField textEdit2=new JTextField("", 1);
+        JTextField textEdit3=new JTextField("", 1);
 
         Container container=this.getContentPane();
         container.setLayout(new GridLayout(4,3));
         container.add(label1);
-        container.add(text1);
+        container.add(textEdit1);
         container.add(label2);
-        container.add(text2);
+        container.add(textEdit2);
         container.add(label3);
-        container.add(text3);
+        container.add(textEdit3);
         container.add(button1);
         container.add(button2);
 
@@ -101,6 +106,7 @@ class Dialog extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                myWindow.setValue(textEdit1.getText(),textEdit2.getText(),textEdit3.getText());
                 setVisible(false);
             }
         });
