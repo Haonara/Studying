@@ -6,8 +6,8 @@ public abstract class Hero {
     protected String type;
     protected int damage;
 
-    public Hero(int maxHealth,int curHealth, String type, int damage) {
-        this.maxHealth = maxHealth;
+    public Hero(int curHealth, String type, int damage) {
+        this.maxHealth = curHealth;
         this.curHealth=curHealth;
         this.type = type;
         this.damage = damage;

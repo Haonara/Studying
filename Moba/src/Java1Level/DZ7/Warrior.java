@@ -2,8 +2,8 @@ package Java1Level.DZ7;
 
 public class Warrior extends Hero {
 
-    public Warrior(int maxHealth, int curHealth, String type, int damage) {
-        super(maxHealth,curHealth, type, damage);
+    public Warrior(int curHealth, String type, int damage) {
+        super(curHealth, type, damage);
     }
 
     @Override
