@@ -11,7 +11,6 @@ public class Map extends JPanel {
     public static final int MODE_H_V_H = 1;
     private static Map instance = null;
     public final int NOT_SIGN = 5;
-    Integer not;
 
     int fieldSizeX;
     int fieldSizeY;
@@ -75,7 +74,7 @@ public class Map extends JPanel {
         return false;
     }
 
-    public Map() {
+    private Map() {
 
         setBackground(Color.ORANGE);
 
@@ -91,7 +90,6 @@ public class Map extends JPanel {
     void update(MouseEvent e) {
         int cellX = e.getX() / cellWidth;
         int cellY = e.getY() / cellHeigth;
-
         System.out.println("x: " + cellX + " y: " + cellY);
         repaint();
     }
@@ -158,9 +156,14 @@ public class Map extends JPanel {
         this.fieldSizeY = fieldSizeY;
         this.winLen = winLen;
         field = new int[fieldSizeY][fieldSizeX];
-
         isInitialized = true;
         repaint();
+
+        for (int i = 0; i < cellWidth; i++) {
+            for (int j = 0; j < cellHeigth; j++) {
+                field[i][j] =NOT_SIGN;
+            }
+        }
 
 
 
