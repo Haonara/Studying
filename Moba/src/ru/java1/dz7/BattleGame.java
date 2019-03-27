@@ -1,7 +1,6 @@
 package ru.java1.dz7;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class BattleGame {
     static int activePlayerID = 0;
@@ -9,7 +8,7 @@ public class BattleGame {
     public static void main(String[] args) {
         boolean finishGame = false;
 
-        Scanner in = new Scanner(System.in);
+
 
         Player[] players = {
                 new Player("Green", true, HeroesGenerator.generateRandomHeroes(Player.DEFAULT_HEROES_COUNT)),
@@ -18,6 +17,7 @@ public class BattleGame {
 
         int idActive;
         int idPassive;
+
         while (!finishGame) {
             idActive = BattleGame.activePlayerID;
             idPassive  = ChangeActivePlayerID(idActive);
@@ -28,8 +28,7 @@ public class BattleGame {
                 finishGame = true;
                 break;
             }
-            System.out.println("Введите что либо для продолжения боя...");
-            in.nextLine();
+
         }
     }
 
