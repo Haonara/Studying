@@ -11,11 +11,11 @@ public class Player extends Gamer {
     }
 
     @Override
-    boolean shot(int x, int y) {
+    boolean shot(int cellX, int cellY) {
         map=Map.getInstance();
-        if (!map.isCellBusy(x, y))
+        if (!map.isCellBusy(cellX, cellY))
         {
-            map.field[x][y] = sign;
+            map.field[cellX][cellY] = sign;
             return true;
         }
         return false;

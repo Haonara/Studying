@@ -18,11 +18,11 @@ public class AI extends Gamer {
     }
 
     // Выстрел компьютера
-    boolean shot(int x, int y)
+    boolean shot(int cellX, int cellY)
     {
         map =Map.getInstance();
-        x = -1;
-        y = -1;
+        cellX = -1;
+        cellY = -1;
         boolean ai_win = false;
         boolean user_win = false;
         // Находим выигрышный ход
@@ -37,8 +37,8 @@ public class AI extends Gamer {
                         map.field[i][j] = sign;
                         if (map.checkWin(sign))
                         {
-                            x = i;
-                            y = j;
+                            cellX = i;
+                            cellY = j;
                             ai_win = true;
                         }
                         map.field[i][j] = map.NOT_SIGN;
@@ -60,8 +60,8 @@ public class AI extends Gamer {
                             map.field[i][j] = this.playerSign;
                             if (map.checkWin(this.playerSign))
                             {
-                                x = i;
-                                y = j;
+                                cellX = i;
+                                cellY = j;
                                 user_win = true;
                             }
                             map.field[i][j] = map.NOT_SIGN;
@@ -75,12 +75,12 @@ public class AI extends Gamer {
             do
             {
                 Random rnd = new Random();
-                x = rnd.nextInt(map.fieldSizeX);
-                y = rnd.nextInt(map.fieldSizeY);
+                cellX = rnd.nextInt(map.fieldSizeX);
+                cellY = rnd.nextInt(map.fieldSizeY);
             }
-            while (map.isCellBusy(x, y));
+            while (map.isCellBusy(cellX, cellY));
         }
-        map.field[x][y] = sign;
+        map.field[cellX][cellY] = sign;
         return true;
     }
 

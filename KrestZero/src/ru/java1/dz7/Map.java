@@ -17,12 +17,24 @@ public class Map extends JPanel {
 
     int[][] field;
 
+    int cellX;
+    int cellY;
+
     int winLen;
 
     int cellHeigth;
     int cellWidth;
 
     boolean isInitialized = false;
+
+    Player player1;
+    Player player2;
+    boolean nextTurn=false;
+    boolean gameOver=false;
+
+    int gameMode = 1;
+    // Уровень AI
+    int aiLevel = 0;
 
     public static synchronized Map getInstance() {
         if (instance == null)
@@ -74,25 +86,113 @@ public class Map extends JPanel {
         return false;
     }
 
-    private Map() {
+    void twoPlayersMode() {
+        if (player1.isShotReady == 1) {
+            nextTurn = true;
+            player2.isShotReady = 0;
+            System.out.println("Player 1 shot!");
+            player1.shot(cellX,cellY);
+        }
+        if (player1.win()) {
+            System.out.println("Player 1 WIN!!!");
+            gameOver = true;
+        }
+        repaint();
+        if (isFieldFull() && !player1.win() && !player2.win()) {
+            gameOver = true;
+            System.out.println("DRAW!!!");
+        }
+        if (player2.isShotReady == 1) {
+            nextTurn = false;
+            player1.isShotReady = 0;
+            System.out.println("Player 2 shot!");
+            player2.shot(cellX,cellY);
+        }
+        if (!gameOver) {
+            player2.shot(cellX, cellY);
+        }
+        if (player2.win()) {
+            System.out.println("Player 2 WIN!!!");
+            gameOver = true;
+        }
+        repaint();
+        if (isFieldFull() && !player2.win() && !player1.win()) {
+            gameOver = true;
+            System.out.println("DRAW!!!");
+        }
+        if (nextTurn) {
+            player1.isShotReady = 0;
+            player2.isShotReady = 1;
+        }
+        else {
+            player1.isShotReady = 1;
+            player2.isShotReady = 0;
+        }
+    }
 
+    // Режим против компьютера
+    void modeAgainstAI() {
+        Player player = new Player(1);
+        AI ai = new AI(0, aiLevel, player.sign);
+        if (!gameOver) {
+            if (player.shot(cellX,cellY)) {
+                if (player.win()) {
+                    System.out.println("Player WIN!!!");
+                    gameOver = true;
+                }
+                if (isFieldFull()) {
+                    gameOver = true;
+                    System.out.println("DRAW!!!");
+                }
+                repaint();
+                if (!gameOver) {
+                    ai.shot(cellX, cellY);
+                }
+                if (ai.win()) {
+                    System.out.println("AI WIN!!!");
+                    gameOver = true;
+                }
+                repaint();
+                if (isFieldFull() && !ai.win()) {
+                    gameOver = true;
+                    System.out.println("DRAW!!!");
+                }
+            }
+        }
+    }
+
+    public Map() {
+
+        setVisible(false);
         setBackground(Color.ORANGE);
+        player1=new Player(0);
+        player2=new Player(1);
 
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                update(e);
+                super.mouseClicked(e);
+                cellX = e.getX() / cellWidth;
+                cellY = e.getY() / cellHeigth;
+                System.out.println("Mouse clicked on " + cellX + " " + cellY);
+
+                if (!gameOver) {
+                    switch (gameMode) {
+                        case 1: {
+                            twoPlayersMode();
+                            break;
+                        }
+                        case 2: {
+                            modeAgainstAI();
+                            break;
+                        }
+                    }
+                }
             }
         });
 
     }
 
-    void update(MouseEvent e) {
-        int cellX = e.getX() / cellWidth;
-        int cellY = e.getY() / cellHeigth;
-        System.out.println("x: " + cellX + " y: " + cellY);
-        repaint();
-    }
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -122,28 +222,22 @@ public class Map extends JPanel {
         }
 
 
-        //Рисуем нолик
         for (int i = 0; i < fieldSizeX; i++) {
             for (int j = 0; j < fieldSizeY; j++) {
                 int x = i * cellWidth;
                 int y=j*cellHeigth;
                 if (field[i][j] != NOT_SIGN){
+                    //Рисуем нолик
                     if (field[i][j] == 0){
                         g.setColor(Color.RED);
                         g.drawOval(x,y, cellWidth,cellHeigth);
                     }
                 }
-            }
-        }
-        //Рисуем крестик
-        for (int i = 0; i < fieldSizeX; i++) {
-            for (int j = 0; j < fieldSizeY; j++) {
-                if (field[i][j] != NOT_SIGN){
-                    if (field[i][j] == 1){
-                        g.setColor(Color.BLUE);
-                        g.drawLine((i * cellWidth),(j*cellHeigth),((i +1)* cellWidth),((j+1)*cellHeigth));
-                        g.drawLine(((i +1)* cellWidth),(j*cellHeigth),(i * cellWidth),((j+1)*cellHeigth));
-                    }
+                //Рисуем крестик
+                if (field[i][j] == 1){
+                    g.setColor(Color.BLUE);
+                    g.drawLine((i * cellWidth),(j*cellHeigth),((i +1)* cellWidth),((j+1)*cellHeigth));
+                    g.drawLine(((i +1)* cellWidth),(j*cellHeigth),(i * cellWidth),((j+1)*cellHeigth));
                 }
 
             }
@@ -157,13 +251,18 @@ public class Map extends JPanel {
         this.winLen = winLen;
         field = new int[fieldSizeY][fieldSizeX];
         isInitialized = true;
+        gameOver=false;
         repaint();
-
-        for (int i = 0; i < cellWidth; i++) {
-            for (int j = 0; j < cellHeigth; j++) {
+        for (int i = 0; i < fieldSizeX; i++) {
+            for (int j = 0; j < fieldSizeY; j++) {
                 field[i][j] =NOT_SIGN;
             }
         }
+        gameMode = 1;
+        aiLevel = 0;
+        setVisible(true);
+
+
 
 
 
