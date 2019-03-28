@@ -6,6 +6,7 @@ public class HeroesGenerator {
 
     public static final int UNITS_CLASSES_COUNT = 3;
 
+
     public static Hero[] generateRandomHeroes(int count) {
         Hero[] heroes = new Hero[count];
         Random random = new Random();
@@ -28,4 +29,5 @@ public class HeroesGenerator {
         }
         return heroes;
     }
+
 }

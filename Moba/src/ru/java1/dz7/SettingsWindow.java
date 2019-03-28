@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
@@ -37,7 +38,7 @@ public class SettingsWindow extends JFrame {
         comboBox2.addItem("Healer");
 
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(3,3));
+        panel.setLayout(new GridLayout(3,2));
         JLabel label1=new JLabel("Team1");
         JLabel label2=new JLabel("Team2");
         label1.setMaximumSize(new Dimension(100,10));
@@ -53,6 +54,7 @@ public class SettingsWindow extends JFrame {
         list2.setMaximumSize(new Dimension(100,50));
         panel.add(list1);
         panel.add(list2);
+
         add(panel);
         JPanel ending=new JPanel();
         ending.setLayout(new GridLayout(1,2));
@@ -70,6 +72,9 @@ public class SettingsWindow extends JFrame {
 
         setVisible(true);
 
+        ArrayList str=new ArrayList(3);
+        ArrayList str2=new ArrayList(3);
+
         start.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -81,7 +86,14 @@ public class SettingsWindow extends JFrame {
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               comboBox1.getSelectedItem();
+
+                    str.add(comboBox1.getSelectedItem());
+
+                String vyvod=" ";
+                for (int i = 0; i <str.size() ; i++) {
+                    vyvod=vyvod+str.get(i)+" ";
+                }
+                list1.setText(vyvod);
 
             }
         });
@@ -89,9 +101,16 @@ public class SettingsWindow extends JFrame {
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                comboBox2.getSelectedItem();
+                str2.add(comboBox2.getSelectedItem());
+
+                String vyvod2=" ";
+                for (int i = 0; i <str2.size() ; i++) {
+                    vyvod2=vyvod2+str2.get(i)+" ";
+                }
+                list2.setText(vyvod2);
             }
         });
+
 
     }
 
